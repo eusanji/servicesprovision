@@ -1,6 +1,6 @@
 package com.servicesprovision.repository;
 
-import com.servicesprovision.model.Client;
+import com.servicesprovision.model.entity.Client;
 import org.springframework.stereotype.Repository;
 
 @Repository
