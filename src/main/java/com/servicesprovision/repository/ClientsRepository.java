@@ -1,11 +1,8 @@
 package com.servicesprovision.repository;
 
 import com.servicesprovision.model.entity.Client;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-@Repository
-public class ClientsRepository {
-    public void persist(Client client) {
-        //access the bd and saves a client
-    }
+public interface ClientsRepository extends JpaRepository<Client,Integer> {
+
 }
