@@ -19,7 +19,7 @@ public class Auditable {
 
     @CreatedDate
     @CreationTimestamp
-    @Column(name = "date_enroll")
+    @Column(name = "date_enroll",updatable = false)
     @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
     private LocalDateTime dateEnroll;
 }
