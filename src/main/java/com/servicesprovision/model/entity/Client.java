@@ -1,15 +1,11 @@
 package com.servicesprovision.model.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
-import org.hibernate.annotations.CreationTimestamp;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+import org.hibernate.validator.constraints.br.CPF;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
-import java.time.LocalDate;
-import java.util.Date;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @EqualsAndHashCode(callSuper = true)
 @Entity
@@ -24,9 +20,12 @@ public class Client extends Auditable {
     private Integer id;
 
     @Column(nullable = false, length = 150)
+    @NotEmpty
     private String name;
 
     @Column(nullable = false, length = 11)
+    @NotNull
+    @CPF
     private String cpf;
 
 }

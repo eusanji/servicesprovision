@@ -17,7 +17,7 @@ public class SellsApplication  {
        return args-> {
            Client client = Client.builder()
                    .name("Joao")
-                   .cpf("12345678912")
+                   .cpf("48191096005")
                    .build();
            clientRepository.save(client);
         };
