@@ -20,12 +20,12 @@ public class Client extends Auditable {
     private Integer id;
 
     @Column(nullable = false, length = 150)
-    @NotEmpty
+    @NotEmpty(message = "{field.name.required}")
     private String name;
 
     @Column(nullable = false, length = 11)
-    @NotNull
-    @CPF
+    @NotNull(message = "{field.cpf.required}")
+    @CPF(message = "{field.cpf.invalid}")
     private String cpf;
 
 }
